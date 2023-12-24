@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bgcolor</title>
+</head>
+<body>
+    <table>
+        <tr><td>Red</td><td><input type="range" min="0" max="255" id="reds"></td><td><input type="text" id="rdv"></td></tr>
+        <tr><td>Green</td><td><input type="range" min="0" max="255" id="greens"></td><td><input type="text" id="grv"></td></tr>
+        <tr><td>Blue</td><td><input type="range" min="0" max="255" id="blues"></td><td><input type="text" id="blv"></td></tr>
+        
+    </table>
+    <button onclick="show()">Show</button>
+    <button onclick="changebg()">Changebg</button>
+</body>
+<script>
+    function show(){
+        var r=document.getElementById("reds").value;
+        var g=document.getElementById("greens").value;
+        var b=document.getElementById("blues").value;
+
+        document.getElementById("rdv").value=r;
+        document.getElementById("grv").value=g;
+        document.getElementById("blv").value=b;
+    }
+    function changebg(){
+        var r,g,b;
+        r=document.getElementById("rdv").value;
+        g=document.getElementById("grv").value;
+        b=document.getElementById("blv").value;
+
+        bgcolor = 'rgb('+r+','+g+','+b+')' ;
+        document.body.style.backgroundColor = bgcolor;
+
+
+    }
+</script>
+</html>

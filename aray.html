@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graeatest number</title>
+    <style>
+        .box
+        {
+            height: 100px;
+            width: 200px;
+            border: 2px solid red;
+            text-align: center;
+            line-height: 50px;
+            margin: auto;
+            margin-top: 25%;
+            background-color: mediumseagreen;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <script>
+        var a = new Array(10);
+        var i,gt;
+        for(i=0;i<a.length; i++)
+        {
+            a[i]= parseInt(prompt("Enter number"+(i+1)));
+
+        }
+        gt = a[0];
+        for(i=1; i<a.length; i++)
+        {
+            if(a[i]>gt)
+            gt = a[i];
+        }
+        document.write(a+"<br>");
+        document.write("Greatest no="+gt);
+
+
+    </script>
+    </div>
+</body>
+</html>

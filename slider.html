@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change background color</title>
+    <script>
+        function showRGB()
+        {
+            var r,g,b;
+            r = document.getElementById("red").value;
+            g = document.getElementById("green").value;
+            b = document.getElementById("blue").value;
+
+            document.getElementById("txtred").value=r;
+            document.getElementById("txtgreen").value=g;
+            document.getElementById("txtblue").value=b;
+        }
+
+        function changecolor()
+        {
+            var rd,gr,bl;
+            rd = document.getElementById("txtred").value;
+            gr = document.getElementById("txtgreen").value;
+            bl = document.getElementById("txtblue").value;
+
+            bgColor='rgb('+rd+','+gr+','+bl+')'
+            document.body.style.backgroundColor=bgColor;
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <table>
+        <tr>
+            <td>Red</td><td><input type="range" min="0" max="255" id="red"></td><td><input type="text" id="txtred"></td>
+        </tr>
+        <tr>
+            <td>Green</td><td><input type="range" min="0" max="255" id="green"></td><td><input type="text" id="txtgreen"></td>
+        </tr>
+        <tr>
+            <td>Blue</td><td><input type="range" min="0" max="255" id="blue"></td><td><input type="text" id="txtblue"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="show" onclick="showRGB()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="change" onclick="changecolor()"></td>
+        </tr>
+    </table>
+   </center>
+</body>
+</html>

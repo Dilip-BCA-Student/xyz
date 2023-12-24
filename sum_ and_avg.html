@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array program</title>
+</head>
+<body>
+  <script>
+    var a = new Array(10);
+    var i,sum=0,avg;
+    for (i=0; i<a.length; i++)
+    {
+        a[i] = parseInt(prompt("Enter value"+(i+1)))
+        sum = sum+a[i];
+        document.write(a[i]+"<br>")
+    }
+    avg = sum/10;
+    document.write("sum of all number="+sum+"<br>Average="+avg);
+    
+  </script>  
+</body>
+</html>

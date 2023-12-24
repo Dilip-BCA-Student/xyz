@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event-listner</title>
+    </head>
+    <body>
+        <button id="myButton">Click me</button>
+        <button id="my">Click me</button>
+        <div id="mydiv" style="width: 100px; height: 100px; background-color: lightblue;" ></div>
+        <input type="text" id="changeInput">
+    </body>
+    <script>
+    const button = document.getElementById('myButton');
+
+        button.addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+        const id = document.getElementById("my");
+        id.addEventListener('click', function(){
+            console.log("clicked");
+        });
+
+        const hoverDiv = document.getElementById("mydiv");
+        hoverDiv.addEventListener('mouseover', () =>{
+            hoverDiv.style.backgroundColor = 'black';
+
+
+
+        })
+
+        const input = document.getElementById('textInput');
+  
+  function handleKeydown(event) {
+    console.log('Key pressed:', event.key);
+  }
+  
+  input.addEventListener('keydown', handleKeydown);
+</script>
+</html>

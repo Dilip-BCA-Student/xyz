@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    Number: <input type="text" id="num"><br>
+    Name: <i id="name"></i><br>
+    <button onclick="clic()">call</button>
+</body>
+<script>
+    function clic(){
+        var nr = prompt("Enter your mobile Number:");
+        document.getElementById("num").value=nr;
+        var nm = prompt("Enter your name: ","");
+        document.getElementById("name").innerHTML=nm;
+
+        
+
+    }
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salary slip</title>
+</head>
+<body bgcolor="orange">
+    <script>
+     // write a program in java script to find gross and net salary of employee for given basic salary and extra allowance//
+     basicsalary=15000;
+     var empid,ename,post,bs,gs,ns,hra,da,ta,ma,pf;
+     empid=12345;
+     ename="dilip";
+     post="eng."; 
+     bs=15000;
+     hra=bs*40/100;
+     da=bs*70/100;
+     fa=bs*30/100;
+     ma=bs*10/100;
+     pf=bs*100/100;
+     ta=bs*20/100;
+     gs=bs+hra+fa+da+ma+pf+ta;
+     ns=gs-pf;
+     document.write("<center><table border='1px'><tr><th colspan='2'>Employee salary sleep</th></tr><tr><th>Employee id</th><td>"+empid+"</td></tr><tr><th>HRA</th><td>"+hra+"</td></tr> <tr><th>DA</th><td>"+da+"</td></tr> <tr><th>TA</th><td>"+ta+"</td></tr> <tr><th>MA</th><td>"+ma+"</td></tr> <tr><th>FA</th><td>"+fa+"</td></tr> <tr><th>gross salary</th><td>"+gs+"</td></tr> <tr><th>net salary</th><td>"+ns+"</td></tr></table></center>"); 
+    </script>
+    
+</body>
+</html>

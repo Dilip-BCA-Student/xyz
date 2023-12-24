@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixing</title>
+</head>
+<body>
+    <script>
+        var str,rs=" ",i,ch;
+        str=prompt("Enter any string")
+        for(i=0; i<str.length; i++)
+        {
+            ch=str.charAt(i);
+            if(ch>='A' && ch<='Z')
+            {
+                rs = rs+ ch.toLowerCase()
+                //rs=rs+(ch+32)
+            }
+            else if(ch>='a' && ch<='z')
+            {
+                rs=rs+ch.toUpperCase();
+                //rs=rs+(ch-32)
+            }
+            else
+            rs=rs+ch
+        }
+        document.write("string in opsite case="+rs);
+    </script>
+</body>
+</html>

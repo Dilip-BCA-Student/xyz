@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str, i, flag=1;
+        str=prompt("Enter any string")
+        for(i=0,j=str.length-1; i<j; i++,j--)
+        {
+            if(str.charAt(i) != str.charAt(j))
+            {
+                flag=0
+                break;
+
+            }
+
+        }
+        if(flag==1)
+        document.write("palindrome string");
+        else
+        document.write("Not")
+    </script>
+</body>
+</html>

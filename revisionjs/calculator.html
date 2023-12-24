@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="first" id="first">
+    <select name="ope" id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" name="second" id="second">
+    <br><br>
+    <br><br>
+    <button onclick="ccalc()">Show</button>
+    <input type="number" name="res" id="res">
+    
+</body>
+<script>
+    function ccalc(){
+        var opr1 = document.getElementById("first").value;
+        var opr2 = document.getElementById("second").value;
+        var ope = document.getElementById("ope").value;
+        if(ope=='+'){
+            var rs = parseInt(opr1)+parseInt(opr2);
+        }
+        else if(ope=='-'){
+            var rs = parseInt(opr1)-parseInt(opr2);
+        }
+        else if(ope=='*'){
+            var rs = parseInt(opr1)*parseInt(opr2);
+        }
+        else if(ope=='/'){
+            var rs = parseInt(opr1)/parseInt(opr2);
+        }
+        else if(ope=='%'){
+            var rs = parseInt(opr1)%parseInt(opr2);
+        }
+        else{
+            alert("select opr");
+        }
+        document.getElementById("res").value=rs;
+
+        
+    }
+
+</script>
+</html>

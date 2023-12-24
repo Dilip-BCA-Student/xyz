@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        #box{
+            height: fit-content;
+            width: fit-content;
+            border: 2px solid magenta;
+        }
+    </style>
+
+    <script>
+        function showRecord()
+        {
+            var unam,pnam,sq,gender,hobby="";
+            unam=document.getElementById("txtuser").value;
+            pnam=document.getElementById("txtpass").value;
+            sq=document.getElementById("sq").value;
+
+            if (document.getElementById("chkmusic").checked==true)
+            {
+                hobby = hobby+ document.getElementById("chkmusic").value+" ";
+            }
+
+            
+            if (document.getElementById("chknews").checked==true)
+            {
+                hobby = hobby+ document.getElementById("chknews").value+" ";
+            }
+
+            
+            if (document.getElementById("chksport").checked==true)
+            {
+                hobby = hobby+ document.getElementById("chksport").value+" ";
+            }
+
+            if (document.getElementById("rdmale").checked==true)
+            {
+                gender=document.getElementById("rdmale").value;
+            }
+
+            else if (document.getElementById("rdfemale").checked==true)
+            {
+                gender=document.getElementById("rdfemale").value;
+            }
+
+            rs="<table border='3px'><tr><th colspan='2'>REGISTRATION DETAILS</th></tr><tr><td>username</td><td>"+unam+"</td></tr> <tr><td>password</td><td>"+pnam+"</td></tr> <tr><td>security question</td><td>"+sq+"</td></tr> <tr><td>hobbies</td><td>"+hobby+"</td></tr> <tr><td>gender</td><td>"+gender+"</td></tr></table>";
+            document.getElementById("box").innerHTML=rs
+
+        
+
+        }
+    </script>
+</head>
+<body>
+
+    <center>
+        <form action="">
+            <table>
+
+        
+                <tr><td>USER NAME</td> <td><input type="text" id="txtuser"></td><tr>
+                <tr><td>PASSWORD</td><td><input type="password" id="txtpass"></td></tr>
+
+                <tr><td>SELECT SECCURITY QUESTION</td>
+                <td>
+                    <select id="sq">
+                        <option value="your favourate color">your favourate color</option>
+                        <option value="your favourate place">your favourate place</option>
+                        <option value="your favourate digit">your favourate digit</option>
+                    </select>
+                </td></tr>
+
+                <tr>
+                    <td>HOBBIES</td><td><input type="checkbox" value="music" id="chkmusic"> music 
+                    <input type="checkbox" value="news" id="chknews">news <input type="checkbox" value="sports" id="chksport">sports</td>
+                </tr>
+
+                <tr><td>GENDER</td><td><input type="radio" name="gender" id="rdmale" value="male"> male <input type="radio" name="gender" id="rdfemale" value="female">female</td></tr>
+
+                <tr><td><input type="button" value="submit" onclick="showRecord()"></td></tr>
+
+
+
+
+
+            </table>
+        </form>
+        <div id="box"></div>
+
+    </center>
+    
+</body>
+</html>

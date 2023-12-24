@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dbox{
+            height: fit-content;
+            width: fit-content;
+            border: 2px red solid;
+            font-size: 40px;
+            background-color: navy;
+            color: white;
+        }
+        #tbox{
+            height: fit-content;
+            width: fit-content;
+            border: 2px red solid;
+            font-size: 40px;
+            background-color: navy;
+            color: white;
+
+        }
+        .text{
+            font-size: 40px;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+    </style>
+
+    <script>
+        function getCurrentDate()
+        {
+            var date = new Date();
+            var d,m,y;
+            d=date.getDate();
+            m=date.getMonth()+1;
+            y=date.getFullYear();
+
+            document.getElementById("dbox").innerHTML=d+"-"+m+"-"+y;
+
+        }
+    </script>
+</head>
+<body onload="getCurrentDate()">
+    <span class="text">Current date</span><span id="dbox"></span>
+    
+    
+    
+</body>
+</html>

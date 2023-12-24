@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist</title>
+    <script>
+        var playlist = ["1.mp4", "2.mp4"]
+        var i=0
+        function playvideo(){
+            document.getElementById("myvideo").play()
+        }
+        function pausevideo(){
+            document.getElementById("myvideo").pause()
+        }
+        function mutevideo(){
+            document.getElementById("myvideo").muted=true
+        }
+        function unmutevideo(){
+            document.getElementById("myvideo").muted=false
+        }
+        function increasevolume(){
+            document.getElementById("myvideo").volume+=0.1
+        }
+        function decreasevolume(){
+            document.getElementById("myvideo").volume-=0.1
+        }
+        function nextvideo(){
+            i++
+            document.getElementById("myvideo").src=playlist[i];
+            document.getElementById("myvideo").play()
+            if (i=playlist.length){
+                i=0
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <!-- <iframe src="" frameborder="0" height="400px" width="500px" border="2px">  -->
+        <video src="1.mp4" height="200px" width="200px" id="myvideo" controls=""></video>
+    <!-- </iframe> -->
+    <br>
+        
+            <input type="button" value="play" onclick="playvideo()">
+            <input type="button" value="pause" onclick="pausevideo()">
+            <input type="button" value="mute" onclick="mutevideo()">
+            <input type="button" value="unmute" onclick="unmutevideo()">
+            <input type="button" value="volume+" onclick="increasevolume()">
+            <input type="button" value="voulme-" onclick="decreasevoulme()">
+            <input type="button" value="next" onclick="nextvideo()">
+            <input type="button" value="previous" onclick="previous()">
+        
+    </center>
+</body>
+</html>

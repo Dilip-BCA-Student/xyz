@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employe</title>
+    <style type="text/css">
+        #box
+        {
+            height: 400px;
+            width: 500px;
+            border-radius: 50px;
+            border: 1px red solid;
+            font-size: 30px;
+
+        }
+    </style>
+    <script>
+        function showRecord()
+        {
+            var empid, ename, post, gender, hobby=" ";
+            empid=document.getElementById("txtempid").value;
+            ename=document.getElementById("txtename").value;
+            post=document.getElementById("   post").value;
+
+            if(document.getElementById("rdmale").value)
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <form action="">
+        <table>
+            <tr><td>Employee id</td><td><input type="text" id="txtempid"></td></tr>
+            <tr><td>Employee name</td><td><input type="text" id="txtename"></td></tr>
+            <tr><td>Select post</td><td><select id="post">
+                <option value="programmer">programmer</option>
+                <option value="manager">manager</option>
+                <option value="clerk">clerk</option>
+            </select></td></tr>
+            
+
+            <tr><td>Gender</td><td><input type= "radio" name="gender"
+                id="rdmale" value="Male">Male <input type="radio" name="gender" id="rdfemale" value="Female">Female</td></tr>
+
+                <tr><td>Hobbies</td><td><input type="checkbox" id="chknews" value="News">News <input type="checkbox" id="chkmusic" value="Music">Music <input type="checkbox" id="chkdance" value="Dance">Dance</td></tr>
+
+                <tr><td><input type="button" value="SHOW" onclick="showRecord()"></td></tr>
+
+
+        </table>
+    </form>
+    <div id="box"></div>
+   </center> 
+</body>
+</html>
